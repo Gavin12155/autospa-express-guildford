@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoSpa Express Guildford — Local Quote Form</title>
+<style>
+  :root { --bg:#0b0b0b; --fg:#fff; --muted:#bdbdbd; --accent:#d4af37; }
+  * { box-sizing:border-box }
+  body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif; background:var(--bg); color:var(--fg); }
+  .wrap { max-width:760px; margin:0 auto; padding:24px 16px; }
+  h1 { margin:10px 0 6px; font-size:26px }
+  p.small { color:var(--muted); margin:0 0 18px; }
+  .card { background:#111; border:1px solid #222; border-radius:14px; padding:16px; }
+  label { display:block; margin:12px 0 6px; }
+  input, select, textarea { width:100%; padding:12px; border-radius:10px; border:1px solid #2a2a2a; background:#0e0e0e; color:#fff; }
+  textarea { min-height:110px }
+  .row { display:grid; grid-template-columns:1fr; gap:12px }
+  @media(min-width:740px) { .row { grid-template-columns:1fr 1fr } }
+  .btn { margin-top:14px; display:inline-block; padding:12px 16px; background:var(--accent); color:#111; border-radius:12px; border:none; font-weight:700; cursor:pointer }
+  .note { font-size:12px; color:var(--muted); margin-top:8px }
+  .code { font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background:#0f0f0f; padding:2px 6px; border-radius:6px; }
+  .hdr { display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap }
+  .pill { font-size:12px; color:#111; background:var(--accent); padding:4px 10px; border-radius:9999px; font-weight:700 }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hdr">
+      <h1>AutoSpa Express Guildford</h1>
+      <span class="pill"></span>
+    </div>
+
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbxIlO0WchX_r4dB0jXKxmgU1cKah5rNzTQFZ6RiMzghOK51Dr3x6xNv2ZcotjCbZNBK4Q/exec" class="card">
+      <input type="hidden" name="_token" value="8b0f1c9ad3e24f15a7c2e4b9d6f0a3c1">
+     
+
+      <div class="row">
+        <div>
+          <label>First Name</label>
+          <input name="first_name" required>
+        </div>
+        <div>
+          <label>Phone (WhatsApp)</label>
+          <input name="phone" required placeholder="+44">
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Email</label>
+          <input name="email" type="email" placeholder="name@example.com">
+        </div>
+        <div>
+          <label>Town / Postcode</label>
+          <input name="location" required placeholder="e.g., GU1 or Guildford">
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Vehicle (Make / Model)</label>
+          <input name="vehicle" required placeholder="e.g., BMW 3 Series">
+        </div>
+        <div>
+          <label>Service Interested In</label>
+          <select name="service" required>
+            <option value="Mini Valet">Mini Valet (£70)</option>
+            <option value="Full Valet">Full Valet (£110)</option>
+            <option value="Deep Valet">Deep Valet (£230)</option>
+            <option value="Winter Combo">Winter Combo (Full Valet + Hydro Sealant) (£120)</option>
+            <option value="Machine Polishing (Stage 1)">Machine Polishing (Stage 1) (£280–£350)</option>
+            <option value="Machine Polishing (Stage 2)">Machine Polishing (Stage 2) (£430–£500)</option>
+            <option value="Ceramic Coating + Warranty">Ceramic Coating + Warranty (£600–£750)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Add-Ons (optional)</label>
+          <select name="addon">
+            <option value="">None</option>
+            <option value="Hydro Sealant Treatment">Hydro Sealant Treatment (£25)</option>
+            <option value="Clay Bar">Clay Bar (£60)</option>
+            <option value="Headlight Restoration">Headlight Restoration (£60)</option>
+            <option value="Engine Bay Detailing">Engine Bay Detailing (£60)</option>
+          </select>
+        </div>
+        <div>
+          <label>Preferred Date & Time</label>
+          <input name="preferred" placeholder="e.g., Tue 11 AM">
+        </div>
+      </div>
+
+      <label>Notes</label>
+      <textarea name="notes" placeholder="Access info, special requests..."></textarea>
+
+      <label style="display:flex;align-items:center;gap:8px;margin-top:10px">
+        <input type="checkbox" name="whatsapp_opt_in" required> I agree to be contacted by WhatsApp/SMS about my booking.
+      </label>
+
+      <button type="submit" class="btn">Send Quote</button>
+    </form>
+  </div>
+<div style="text-align:center;margin:16px 0;color:#aaa">Back to <a href="index.html" style="color:#fff;text-decoration:underline">Launch page</a></div>
+</body>
+</html>
