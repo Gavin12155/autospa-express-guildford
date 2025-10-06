@@ -30,8 +30,13 @@
       <span class="pill"></span>
     </div>
 
-    <form method="POST" action="https://script.google.com/macros/s/AKfycbxIlO0WchX_r4dB0jXKxmgU1cKah5rNzTQFZ6RiMzghOK51Dr3x6xNv2ZcotjCbZNBK4Q/exec" class="card">
-      <input type="hidden" name="_token" value="8b0f1c9ad3e24f15a7c2e4b9d6f0a3c1">
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbxIlO0WchX_r4dB0jXKxmgU1cKah5rNzTQFZ6RiMzghOK51Dr3x6xNv2ZcotjCbZNBK4Q/exec">
+  <input type="hidden" name="_token" value="8b0f1c9ad3e24f15a7c2e4b9d6f0a3c1">
+  <input type="hidden" id="redir" name="_redirect" value="">
+  <button type="submit" class="btn">Send Quote</button>
+</form>
+
+
      
 
       <div class="row">
@@ -103,5 +108,12 @@
     </form>
   </div>
 <div style="text-align:center;margin:16px 0;color:#aaa">Back to <a href="index.html" style="color:#fff;text-decoration:underline">Launch page</a></div>
+<!-- put before </body> -->
+<script>
+  (function(){
+    var r=document.getElementById('redir');
+    if(r) r.value = window.location.origin + '/thank-you.html';
+  })();
+</script>
 </body>
 </html>
