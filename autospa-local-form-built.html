@@ -29,9 +29,12 @@
       <h1>AutoSpa Express Guildford</h1>
       <span class="pill"></span>
     </div>
-<form method="POST" action="https://script.google.com/macros/s/AKfycbxIlO0WchX_r4dB0jXKxmgU1cKah5rNzTQFZ6RiMzghOK51Dr3x6xNv2ZcotjCbZNBK4Q/exec">
-  <input type="hidden" name="_token" value="8b0f1c9ad3e24f15a7c2e4b9d6f0a3c1">
-  <input type="hidden" id="redir" name="_redirect" value="">
+
+    <!-- START FORM: move this line up so all fields are inside -->
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbxIlO0WchX_r4dB0jXKxmgU1cKah5rNzTQFZ6RiMzghOK51Dr3x6xNv2ZcotjCbZNBK4Q/exec" class="card">
+      <input type="hidden" name="_token" value="8b0f1c9ad3e24f15a7c2e4b9d6f0a3c1">
+      <input type="hidden" id="redir" name="_redirect" value="">
+
       <div class="row">
         <div>
           <label>First Name</label>
@@ -94,20 +97,23 @@
       <textarea name="notes" placeholder="Access info, special requests..."></textarea>
 
       <label style="display:flex;align-items:center;gap:8px;margin-top:10px">
-        <input type="checkbox" name="whatsapp_opt_in" required> I agree to be contacted by WhatsApp/SMS about my booking.
+        <input type="checkbox" name="whatsapp_opt_in"> I agree to be contacted by WhatsApp/SMS about my booking.
       </label>
- 
-  <button type="submit" class="btn">Send Quote</button>
-</form>
-      
+
+      <button type="submit" class="btn">Send Quote</button>
+    </form>
+    <!-- END FORM -->
+
   </div>
-<div style="text-align:center;margin:16px 0;color:#aaa">Back to <a href="index.html" style="color:#fff;text-decoration:underline">Launch page</a></div>
-<!-- put before </body> -->
-<script>
-  (function(){
-    var r=document.getElementById('redir');
-    if(r) r.value = window.location.origin + '/thank-you.html';
-  })();
-</script>
+
+  <div style="text-align:center;margin:16px 0;color:#aaa">Back to <a href="index.html" style="color:#fff;text-decoration:underline">Launch page</a></div>
+
+  <!-- Keep dynamic redirect so it works on Preview / your domain -->
+  <script>
+    (function(){
+      var r=document.getElementById('redir');
+      if(r) r.value = window.location.origin + '/thank-you.html';
+    })();
+  </script>
 </body>
 </html>
